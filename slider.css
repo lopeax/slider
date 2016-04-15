@@ -1,0 +1,60 @@
+.slider {
+    background: #FFFFFF;
+    float: left;
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+}
+
+.slider .slide-tabs {
+    bottom: 100%;
+    position: absolute;
+}
+
+.slider .slide-tabs .slide-tab {
+    background: #E3E3E3;
+    cursor: pointer;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 5px 0 0;
+    padding: 0 15px;
+    position: relative;
+    -webkit-transition: background 0.3s, border-color 0.3s;
+            transition: background 0.3s, border-color 0.3s;
+}
+
+.slider .slide-tabs .slide-tab.active {
+    background: #FFFFFF;
+}
+
+.slider .slides {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: height 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: height 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 100%;
+}
+
+.slider .slides .slide-viewport {
+    height: 100%;
+    left: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 100%;
+}
+
+.slider .slides .slide-viewport .slide {
+    left: 0;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.slider .slides .slide-viewport .slide:not(:first-child) {
+    left: 100%;
+}
